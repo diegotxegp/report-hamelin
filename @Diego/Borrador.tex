@@ -1,0 +1,26 @@
+\subsection{Usability and accessibility considerations}
+
+Throughout the development process, attention was paid to usability and accessibility:
+
+Terminology: All labels, instructions and error messages use clinical terminology rather than technical jargon. For example, ``primary variable'' instead of ``target variable'', ``inclusion criteria'' instead of ``data filtering''.
+
+Guidance and tooltips: Each tab includes brief instructions explaining what the user should do.
+
+Error handling: When users make invalid choices (e.g., selecting a non-numeric variable as the target for regression), the system provides clear, actionable error messages rather than cryptic technical errors.
+
+Visual design: The interface uses a clean, uncluttered layout with consistent color schemes and typography. Important actions (e.g., "Train Model") are highlighted with prominent buttons.
+
+Performance: The system is designed to handle datasets with up to several thousand rows and hundreds of columns, which covers the majority of clinical research scenarios. For larger datasets, the system provides warnings and suggests strategies (e.g., sampling, dimensionality reduction).
+
+\subsection{Evaluation of the interface with end-users}
+
+The interface was evaluated through usability studies with \glspl{crp} at IDIVAL. Participants were asked to complete representative tasks (e.g., "Build a model to predict pressure injury risk using the UPS dataset") while thinking aloud. Sessions were recorded and analyzed to identify usability issues.
+
+Key findings included:
+
+    Positive feedback on workflow structure: CRPs appreciated the step-by-step progression and found it intuitive.
+    Challenges with missing data strategies: Some CRPs were uncertain about which imputation method to choose. This led to the addition of more detailed guidance and examples.
+    Desire for more control over feature engineering: Advanced users wanted the ability to create derived variables (e.g., BMI from weight and height). This feature was added in a later iteration.
+    High satisfaction with transparency: CRPs valued knowing which algorithm was used and being able to inspect predictions at the individual level.
+
+Overall, the interface was judged to be usable by CRPs with minimal training, confirming that the HGML approach can successfully bridge the gap between clinical expertise and ML technology.
